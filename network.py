@@ -25,7 +25,7 @@ from keras.layers.embeddings import Embedding
 from keras.layers.core import Dropout, Activation
 
 from misc import get_logger, Option
-opt = Option('./config.json')
+opt = Option('shopping-classification/config.json')
 
 
 def top1_acc(x, y):

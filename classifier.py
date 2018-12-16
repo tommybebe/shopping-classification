@@ -30,12 +30,12 @@ from six.moves import zip, cPickle
 from misc import get_logger, Option
 from network import TextOnly, top1_acc
 
-opt = Option('./config.json')
+opt = Option('shopping-classification/config.json')
 if six.PY2:
-    cate1 = json.loads(open('../cate1.json').read())
+    cate1 = json.loads(open('shopping-classification/dataset/cate1.json').read())
 else:
-    cate1 = json.loads(open('../cate1.json', 'rb').read().decode('utf-8'))
-DEV_DATA_LIST = ['../dev.chunk.01']
+    cate1 = json.loads(open('shopping-classification/dataset/cate1.json', 'rb').read().decode('utf-8'))
+DEV_DATA_LIST = ['shopping-classification/dataset/dev.chunk.01']
 
 
 class Classifier():
